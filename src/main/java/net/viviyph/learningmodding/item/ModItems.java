@@ -7,6 +7,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.viviyph.learningmodding.LearningModding;
 
 public class ModItems {
+
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(LearningModding.MOD_ID);
 
     public static final DeferredItem<Item> BISMUTH = ITEMS.register("bismuth",

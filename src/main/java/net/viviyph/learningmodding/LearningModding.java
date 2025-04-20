@@ -2,6 +2,7 @@ package net.viviyph.learningmodding;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.viviyph.learningmodding.block.ModBlocks;
 import net.viviyph.learningmodding.item.ModItems;
 import org.slf4j.Logger;
 
@@ -23,6 +24,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(LearningModding.MOD_ID)
 public class LearningModding {
+
     public static final String MOD_ID = "vivslearningmodding";
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -38,6 +40,7 @@ public class LearningModding {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -54,6 +57,11 @@ public class LearningModding {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BISMUTH);
             event.accept(ModItems.RAW_BISMUTH);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept(ModBlocks.BISMUTH_ORE);
         }
     }
 
