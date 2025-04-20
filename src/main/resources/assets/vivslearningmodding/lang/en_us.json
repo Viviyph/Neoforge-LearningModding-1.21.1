@@ -1,9 +1,14 @@
 {
+
   "itemGroup.learningmodding": "Example Mod Tab",
 
   "item.vivslearningmodding.bismuth": "Bismuth",
   "item.vivslearningmodding.raw_bismuth": "Raw Bismuth",
 
   "block.vivslearningmodding.bismuth_block": "Block of Bismuth",
-  "block.vivslearningmodding.bismuth_ore": "Bismuth Ore"
+  "block.vivslearningmodding.bismuth_ore": "Bismuth Ore",
+
+  "creativetab.vivslearningmodding.bismuth_items": "Bismuth Items",
+  "creativetab.vivslearningmodding.bismuth_blocks": "Bismuth Blocks"
+
 }

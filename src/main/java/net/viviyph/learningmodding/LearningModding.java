@@ -3,6 +3,7 @@ package net.viviyph.learningmodding;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.viviyph.learningmodding.block.ModBlocks;
+import net.viviyph.learningmodding.item.ModCreativeModeTabs;
 import net.viviyph.learningmodding.item.ModItems;
 import org.slf4j.Logger;
 
@@ -38,6 +39,8 @@ public class LearningModding {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
